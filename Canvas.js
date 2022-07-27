@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View } from 'react-native';
 import { useFonts } from 'expo-font';
 
-export default function Convas({children}) {
+export default function Convas({dark, children}) {
   useFonts({
     'AvenirNextLTPro-Bold': require('./fonts/AvenirNextLTPro-Bold.ttf'),
     'AvenirNextLTPro-Demi': require('./fonts/AvenirNextLTPro-Demi.ttf'),
@@ -11,6 +11,7 @@ export default function Convas({children}) {
   });
   return (
     <View style={{
+      backgroundColor: dark ? '#0C365A' : 'white',
       flex: 1,
       borderWidth: 0.5,
       borderColor: 'gray',
